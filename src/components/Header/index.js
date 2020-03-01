@@ -44,7 +44,7 @@ class Header extends React.Component {
 
         // 封装对象
         const todo = { id: lastTodoId + 1, content: content };
-        this.props.addHandler(todo);
+        this.props.actionCreators.addHandler(todo);
         // 清空文本框
         content = '';
 
@@ -70,8 +70,7 @@ const mapStateToProps = state => {
  */
 const mapDispatchToProps = dispatch => {
     return {
-        // 新增
-        addHandler: bindActionCreators(actionCreators.addHandler, dispatch)
+        actionCreators: bindActionCreators(actionCreators, dispatch)
     }
 }
 

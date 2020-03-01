@@ -78,12 +78,12 @@ class TodoItem extends React.Component {
     }
 
     componentDidMount() {
-        this.props.getTodosAction();
+        this.props.actionCreators.getTodosAction();
     }
 
     deleteHandlerConfirm(id) {
         message.success('删除成功');
-        this.props.deleteHandler(id);
+        this.props.actionCreators.deleteHandler(id);
     }
 
     deleteHandlerCancel() {
@@ -122,7 +122,7 @@ class TodoItem extends React.Component {
                 content
             });
             message.success("保存成功");
-            this.props.updateHandler(id, content);
+            this.props.actionCreators.updateHandler(id, content);
         }, 1000);
     };
 
@@ -153,12 +153,7 @@ const mapStateToProps = state => {
  */
 const mapDispatchToProps = dispatch => {
     return {
-        // 获取全部数据
-        getTodosAction: bindActionCreators(actionCreators.getTodosAction, dispatch),
-        // 执行删除功能
-        deleteHandler: bindActionCreators(actionCreators.deleteHandler, dispatch),
-        // 执行修改功能
-        updateHandler: bindActionCreators(actionCreators.updateHandler, dispatch)
+        actionCreators: bindActionCreators(actionCreators, dispatch)
     }
 }
 
