@@ -14,11 +14,18 @@ Todo是使用create-react-app脚手架并且基于Ant Design 构建的React案�
 ### 运行启动
 
 ```shell
-git clone ssh
-npm install
-npm start
+git clone https://github.com/q-linyu/react-todo-thunk.git
+
+# 安装依赖
+yarn
+
+# 启动
+yarn start
 
 # 访问url
 localhost:3000
 ```
 
+### 效果图
+
+![image](https://raw.githubusercontent.com/q-linyu/images/master/react-todo.png)
