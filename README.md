@@ -28,4 +28,4 @@ localhost:3000
 
 ### 效果图
 
-![image](https://project-commons-images.oss-cn-shenzhen.aliyuncs.com/react-todo-thunk/redux-thunk-todo.png)
+![](https://project-commons-images.oss-cn-shenzhen.aliyuncs.com/react-todo-thunk/redux-thunk-todo.png)
